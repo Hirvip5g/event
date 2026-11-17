@@ -644,7 +644,7 @@
   {
     "canal": "Claro Sports",
     "channel": "clarosports.html",
-    "logo": "https://i.ibb.co/V310Z0q/canal5.png",
+    "logo": "https://i.ibb.co/6chwhjB2/claro-sports.png",
     "grupo": "DEPORTES",
     "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0",
     "referer": "https://www.primevideo.com/",
@@ -658,7 +658,7 @@
   {
     "canal": "Universo HD",
     "channel": "universo",
-    "logo": "https://i.ibb.co/V310Z0q/canal5.png",
+    "logo": "https://i.ibb.co/2SYRLkw/nbc-universo.png",
     "grupo": "DEPORTES",
     "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0",
     "referer": "https://www.primevideo.com/",
@@ -668,6 +668,20 @@
       "key": "c618d32c56cdc6cad8330eb98507ca3f"
     },
     "url": "https://square-feather-406d.kartinadaren.workers.dev/https://akam.stream.peacocktv.com/Content/CMAF_OL2-CTR-4s-v2/Live/channel(universo-east)/master.mpd"
+  },
+  {
+    "canal": "Nacion Deportes HD",
+    "channel": "nacion_deportes1",
+    "logo": "https://i.imgur.com/zowLLBp.png",
+    "grupo": "DEPORTES",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0",
+    "referer": "https://www.primevideo.com/",
+    "tipo": "clearkey",
+    "clearkey": {
+      "keyId": "2fbdaa3bea0d0323ae011b318d1db716",
+      "key": "8726ef7eaf5b9dce15fb6aa9f80bd53f"
+    },
+    "url": "https://a121aivottepl-a.akamaihd.net/iad-nitro/live/clients/dash/enc/oboxe53wyo/out/v1/f7892a9d706d419a846d738fa22ea33e/cenc.mpd"
   },
   {
     "canal": "AZTECA 7 MUTICALIDAD",
