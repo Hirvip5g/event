@@ -656,6 +656,20 @@
     "url": "https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/4eia4ypjxr/out/v1/2c628105d22c47dcb532e26968706a83/cenc.mpd"
   },
   {
+    "canal": "Universo HD",
+    "channel": "universo",
+    "logo": "https://i.ibb.co/V310Z0q/canal5.png",
+    "grupo": "DEPORTES",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0",
+    "referer": "https://www.primevideo.com/",
+    "tipo": "clearkey",
+    "clearkey": {
+      "keyId": "96b67fa09140329a89b7a1ead134eda3",
+      "key": "c618d32c56cdc6cad8330eb98507ca3f"
+    },
+    "url": "https://square-feather-406d.kartinadaren.workers.dev/https://akam.stream.peacocktv.com/Content/CMAF_OL2-CTR-4s-v2/Live/channel(universo-east)/master.mpd"
+  },
+  {
     "canal": "AZTECA 7 MUTICALIDAD",
     "channel": "azteca7",
     "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Logo_Azteca_7_2011.svg/1280px-Logo_Azteca_7_2011.svg.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
