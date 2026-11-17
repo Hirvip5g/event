@@ -1174,8 +1174,8 @@
                             "logo": "",
                             "homeTeam": "América de Cali",
                             "awayTeam": "Inter Bogotá",
-                            "homeLogo": "",
-                            "awayLogo": "",
+                            "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/lwxcn71576156105.png",
+                            "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/jujchi1767716318.png",
                             "imageMode": "",
                             "duration": 130,
                             "extraTime": 0,
@@ -1330,5 +1330,5 @@
             ]
         }
     ],
-    "updated": "2026-11-17 14:59:37"
+    "updated": "2026-11-17 15:09:06"
 }
