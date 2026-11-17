@@ -28,7 +28,7 @@ jobs:
 
       - name: Ejecutar script extractor
         run: |
-          python generate_m3u_3.py
+          python generate_m3u.py
 
       - name: Guardar cambios en el repositorio
         run: |
