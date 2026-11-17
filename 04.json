@@ -684,6 +684,34 @@
     "url": "https://a121aivottepl-a.akamaihd.net/iad-nitro/live/clients/dash/enc/oboxe53wyo/out/v1/f7892a9d706d419a846d738fa22ea33e/cenc.mpd"
   },
   {
+    "canal": "Nacion Deportes 2 HD",
+    "channel": "nacion_deportes2",
+    "logo": "https://i.imgur.com/zowLLBp.png",
+    "grupo": "DEPORTES",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0",
+    "referer": "https://www.primevideo.com/",
+    "tipo": "clearkey",
+    "clearkey": {
+      "keyId": "8836fb04d62dc64c9f8a39ef8640d5eb",
+      "key": "d4f05ce56c5231b7cdf53455bea58621"
+    },
+    "url": "https://a121aivottepl-a.akamaihd.net/iad-nitro/live/clients/dash/enc/tepjqej1ys/out/v1/c9c9159baee749a19612b1598495859a/cenc.mpd"
+  },
+  {
+    "canal": "Nacion Deportes 3 HD",
+    "channel": "nacion_deportes3",
+    "logo": "https://i.imgur.com/zowLLBp.png",
+    "grupo": "DEPORTES",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0",
+    "referer": "https://www.primevideo.com/",
+    "tipo": "clearkey",
+    "clearkey": {
+      "keyId": "9f327d24c66fbd84e15ab5c9ead7c7a4",
+      "key": "83837185529c0c4048f81386c2d36426"
+    },
+    "url": "https://a121aivottepl-a.akamaihd.net/iad-nitro/live/clients/dash/enc/wybgz0orr8/out/v1/2f6d1612abd44f5883917f8a585b955f/cenc.mpd"
+  },
+  {
     "canal": "AZTECA 7 MUTICALIDAD",
     "channel": "azteca7",
     "logo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/23/Logo_Azteca_7_2011.svg/1280px-Logo_Azteca_7_2011.svg.png?utm_source=es.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
