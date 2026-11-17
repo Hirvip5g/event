@@ -203,13 +203,20 @@
                                 },
                                 {
                                     "name": "Claro Sports",
-                                    "url": "https://pruevon.blogspot.com/2026/04/embedc.html?r=https%3A%2F%2Fstreamx723.sbs%2Fchannel%2Fclarosports.html",
-                                    "type": "iframe",
+                                    "url": "https://netskrt.live.pv-cdn.net/OTTB/lhr-nitro/live/clients/dash/enc/4eia4ypjxr/out/v1/2c628105d22c47dcb532e26968706a83/cenc.mpd",
+                                    "type": "clearkey",
                                     "quality": "FHD",
                                     "active": true,
                                     "languages": [],
                                     "customLanguages": "",
-                                    "channelLogo": ""
+                                    "channelLogo": "https://i.ibb.co/V310Z0q/canal5.png",
+                                    "clearkey": {
+                                        "keyId": "4b2e5f5d42771121d0dc5f6c9f74ac30",
+                                        "key": "60460fa43257c537ba19a7f735d8177c"
+                                    },
+                                    "referer": "https://www.primevideo.com/",
+                                    "origin": "",
+                                    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0"
                                 },
                                 {
                                     "name": "Azteca 7",
@@ -1337,5 +1344,5 @@
             ]
         }
     ],
-    "updated": "2026-11-17 16:54:37"
+    "updated": "2026-11-17 17:02:35"
 }
