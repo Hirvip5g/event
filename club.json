@@ -1,0 +1,446 @@
+{
+    "Athletico-PR": {
+        "search_name": "Athletico Paranaense",
+        "aliases": ["athletico-pr", "athletico pr", "athletico paranaense"]
+    },
+    "Slavia Praha": {
+        "search_name": "Slavia Prague",
+        "aliases": ["slavia praha", "slavia prague", "slavia praga"]
+    },
+    "Sporting CP": {
+        "search_name": "Sporting Lisbon",
+        "aliases": ["sporting cp", "sporting lisbon", "sporting de lisboa"]
+    },
+    "Inter": {
+        "search_name": "Inter Milan",
+        "aliases": ["inter", "inter de milan", "inter milan"]
+    },
+    "Bayern München": {
+        "search_name": "Bayern Munich",
+        "aliases": ["bayern munchen", "bayern munich", "bayern de munich"]
+    },
+    "Brasil": {
+        "search_name": "Brazil U17 Women",
+        "aliases": ["Brazil"]
+    },
+    "Nigeria": {
+        "search_name": "Nigeria U17 Women",
+        "aliases": ["Nigeria U17"]
+    },
+    "Japón": {
+        "search_name": "Japan U17 Women",
+        "aliases": ["Japan U17"]
+    },
+    "Corea del Norte": {
+        "search_name": "North Korea U17 Women",
+        "aliases": ["North Korea U17"]
+    },
+    "Bayer Leverkusen": {
+        "search_name": "Bayer Leverkusen",
+        "aliases": ["Bayer Leverkusen"]
+    },
+    "Olympique Marseille": {
+        "search_name": "Marseille",
+        "aliases": ["Marseille"]
+    },
+    "Celta de Vigo": {
+        "search_name": "Celta Vigo",
+        "aliases": ["Celta Vigo"]
+    },
+    "Union Saint-Gilloise": {
+        "search_name": "Union Saint-Gilloise",
+        "aliases": ["DEMO2"]
+    },
+    "Sparta Praha": {
+        "search_name": "Sparta Prague",
+        "aliases": ["Sparta Prague"]
+    },
+    "AFC Bournemouth": {
+        "search_name": "Bournemouth",
+        "aliases": ["Bournemouth"]
+    },
+    "Olympique Lyonnais": {
+        "search_name": "Lyon",
+        "aliases": ["Lyon"]
+    },
+    "Gimnasia La Plata": {
+        "search_name": "Gimnasia y Esgrima de La Plata",
+        "aliases": ["Gimnasia y Esgrima de La Plata"]
+    },
+    "Belgrano": {
+        "search_name": "Belgrano",
+        "aliases": ["Belgrano"]
+    },
+    "GP Brasil - Práctica 1": {
+        "search_name": "São Paulo Grand Prix Practice 1",
+        "aliases": ["São Paulo Grand Prix Practice 1"]
+    },
+    "GP Brasil - Práctica 2": {
+        "search_name": "São Paulo Grand Prix Practice 2",
+        "aliases": ["São Paulo Grand Prix Practice 2"]
+    },
+    "Hamburger SV": {
+        "search_name": "Hamburg",
+        "aliases": ["Hamburg"]
+    },
+    "Borussia M'gladbach": {
+        "search_name": "Borussia Mönchengladbach",
+        "aliases": ["Borussia Mönchengladbach"]
+    },
+    "CD Castellón": {
+        "search_name": "Castellón",
+        "aliases": ["Castellón"]
+    },
+    "Atlético San Luis": {
+        "search_name": "Atlético de San Luis",
+        "aliases": ["Atlético de San Luis"]
+    },
+    "Juárez": {
+        "search_name": "Juárez",
+        "aliases": ["Juárez"]
+    },
+    "Unión Santa Fe": {
+        "search_name": "Unión",
+        "aliases": ["Unión"]
+    },
+    "Darmstadt 98": {
+        "search_name": "Darmstadt",
+        "aliases": ["Darmstadt"]
+    },
+    "Hertha BSC": {
+        "search_name": "Hertha",
+        "aliases": ["Hertha"]
+    },
+    "Racing Santander": {
+        "search_name": "Racing de Santander",
+        "aliases": ["Racing de Santander"]
+    },
+    "Deportivo La Coruña": {
+        "search_name": "Deportivo de A Coruña",
+        "aliases": ["Deportivo de A Coruña"]
+    },
+    "Athletic Club": {
+        "search_name": "Athletic Bilbao",
+        "aliases": ["Athletic Bilbao"]
+    },
+    "Mainz 05": {
+        "search_name": "Mainz",
+        "aliases": ["Mainz"]
+    },
+    "Altrincham": {
+        "search_name": "Altrincham",
+        "aliases": ["Altrincham"]
+    },
+    "Notts County": {
+        "search_name": "Notts County",
+        "aliases": ["Notts County"]
+    },
+    "Peterborough United": {
+        "search_name": "Peterborough United",
+        "aliases": ["Peterborough United"]
+    },
+    "Reading": {
+        "search_name": "Reading",
+        "aliases": ["Reading"]
+    },
+    "FC Cajamarca": {
+        "search_name": "Cajamarca",
+        "aliases": ["Cajamarca"]
+    },
+    "PSG": {
+        "search_name": "Paris Saint-Germain",
+        "aliases": ["Paris Saint-Germain"]
+    },
+    "Estudiantes Río Cuarto": {
+        "search_name": "Estudiantes de Río Cuarto",
+        "aliases": ["Estudiantes de Río Cuarto"]
+    },
+    "Vitória Guimarães": {
+        "search_name": "Vitória de Guimarães",
+        "aliases": ["Vitória de Guimarães"]
+    },
+    "Central Córdoba SdE": {
+        "search_name": "Central Córdoba de Santiago del Estero",
+        "aliases": ["Central Córdoba de Santiago del Estero"]
+    },
+    "Curazao": {
+        "search_name": "Curaçao",
+        "aliases": ["Curaçao"]
+    },
+    "Panamá": {
+        "search_name": "Panama",
+        "aliases": ["Panama"]
+    },
+    "Martinica": {
+        "search_name": "Martinique",
+        "aliases": ["Martinique"]
+    },
+    "Antigua y Barbuda": {
+        "search_name": "Antigua and Barbuda",
+        "aliases": ["Antigua and Barbuda"]
+    },
+    "Trinidad y Tobago": {
+        "search_name": "Trinidad and Tobago",
+        "aliases": ["Trinidad and Tobago"]
+    },
+    "Estudiantes LP": {
+        "search_name": "Estudiantes de La Plata",
+        "aliases": ["Estudiantes de La Plata"]
+    },
+    "España": {
+        "search_name": "Spain",
+        "aliases": ["DEMO2"]
+    },
+    "Kazajistán": {
+        "search_name": "Kazakhstan",
+        "aliases": ["DEMO2"]
+    },
+    "Luxemburgo": {
+        "search_name": "Luxembourg",
+        "aliases": ["DEMO2"]
+    },
+    "Azerbaiyán": {
+        "search_name": "Azerbaijan",
+        "aliases": ["DEMO2"]
+    },
+    "Escocia": {
+        "search_name": "Scotland",
+        "aliases": ["DEMO2"]
+    },
+    "Macedonia del Norte": {
+        "search_name": "North Macedonia",
+        "aliases": ["DEMO2"]
+    },
+    "Grecia": {
+        "search_name": "Greece",
+        "aliases": ["DEMO2"]
+    },
+    "Países Bajos": {
+        "search_name": "Netherlands",
+        "aliases": ["DEMO2"]
+    },
+    "Islandia": {
+        "search_name": "Iceland",
+        "aliases": ["DEMO2"]
+    },
+    "Eslovaquia": {
+        "search_name": "Slovakia",
+        "aliases": ["DEMO2"]
+    },
+    "Islas Feroe": {
+        "search_name": "Faroe Islands",
+        "aliases": ["DEMO2"]
+    },
+    "Suiza": {
+        "search_name": "Switzerland",
+        "aliases": ["DEMO2"]
+    },
+    "Alemania": {
+        "search_name": "Germany",
+        "aliases": ["DEMO2"]
+    },
+    "Saint Martin": {
+        "search_name": "St Martin",
+        "aliases": ["DEMO2"]
+    },
+    "Canadá": {
+        "search_name": "Canada",
+        "aliases": ["DEMO2"]
+    },
+    "Singapur": {
+        "search_name": "Singapore",
+        "aliases": ["DEMO2"]
+    },
+    "Emiratos Árabes Unidos": {
+        "search_name": "United Arab Emirates",
+        "aliases": ["DEMO2"]
+    },
+    "Arabia Saudita": {
+        "search_name": "Saudi Arabia",
+        "aliases": ["DEMO2"]
+    },
+    "Corea del Sur": {
+        "search_name": "South Korea",
+        "aliases": ["DEMO2"]
+    },
+    "Perú": {
+        "search_name": "Peru",
+        "aliases": ["DEMO2"]
+    },
+    "Eslovenia": {
+        "search_name": "Slovenia",
+        "aliases": ["DEMO2"]
+    },
+    "Moldavia": {
+        "search_name": "Moldova",
+        "aliases": ["DEMO2"]
+    },
+    "Inter Bogotá": {
+        "search_name": "Internacional de Bogotá",
+        "aliases": ["DEMO2"]
+    },
+    "Santa Fe": {
+        "search_name": "Independiente Santa Fe",
+        "aliases": ["DEMO2"]
+    },
+    "Hungría": {
+        "search_name": "Hungary",
+        "aliases": ["DEMO2"]
+    },
+    "Noruega": {
+        "search_name": "Norway",
+        "aliases": ["DEMO2"]
+    },
+    "Gales": {
+        "search_name": "Wales",
+        "aliases": ["DEMO2"]
+    },
+    "República de Irlanda": {
+        "search_name": "Ireland",
+        "aliases": ["DEMO2"]
+    },
+    "Suecia": {
+        "search_name": "Sweden",
+        "aliases": ["DEMO2"]
+    },
+    "Irlanda del Norte": {
+        "search_name": "N.Ireland",
+        "aliases": ["DEMO2"]
+    },
+    "Ucrania": {
+        "search_name": "Ukraine",
+        "aliases": ["DEMO2"]
+    },
+    "Rumanía": {
+        "search_name": "Romania",
+        "aliases": ["DEMO2"]
+    },
+    "Polonia": {
+        "search_name": "Poland",
+        "aliases": ["DEMO2"]
+    },
+    "Dinamarca": {
+        "search_name": "Denmark",
+        "aliases": ["DEMO2"]
+    },
+    "Japón": {
+        "search_name": "Japan",
+        "aliases": ["DEMO2"]
+    },
+    "Brasil": {
+        "search_name": "Brazil",
+        "aliases": ["DEMO2"]
+    },
+    "Real Sociedad II": {
+        "search_name": "Real Sociedad B",
+        "aliases": ["DEMO2"]
+    },
+    "Sporting Gijón": {
+        "search_name": "Sporting de Gijón",
+        "aliases": ["DEMO2"]
+    },
+    "Fortaleza CEIF": {
+        "search_name": "Fortaleza FC",
+        "aliases": ["DEMO2"]
+    },
+    "San Vicente / Granadinas": {
+        "search_name": "St Vincent and the Grenadines",
+        "aliases": ["DEMO2"]
+    },
+    "Belice": {
+        "search_name": "Belize",
+        "aliases": ["DEMO2"]
+    },
+    "Kazajstán": {
+        "search_name": "Kazakhstan",
+        "aliases": ["DEMO2"]
+    },
+    "Eslovaquia": {
+        "search_name": "Slovakia",
+        "aliases": ["DEMO2"]
+    },
+    "Lituania": {
+        "search_name": "Lithuania",
+        "aliases": ["DEMO2"]
+    },
+    "Liechtenstein": {
+        "search_name": "Liechtenstein",
+        "aliases": ["DEMO2"]
+    },
+    "UTC Cajamarca": {
+        "search_name": "Universidad Técnica de Cajamarca",
+        "aliases": ["DEMO2"]
+    },
+    "Celta de Vigo II": {
+        "search_name": "Celta Fortuna",
+        "aliases": ["DEMO2"]
+    },
+    "Rusia": {
+        "search_name": "Russia",
+        "aliases": ["DEMO2"]
+    },
+    "Chile": {
+        "search_name": "Chile",
+        "aliases": ["DEMO2"]
+    },
+    "Colombia": {
+        "search_name": "Colombia",
+        "aliases": ["DEMO2"]
+    },
+    "Guayana Francesa": {
+        "search_name": "French Guiana",
+        "aliases": ["DEMO2"]
+    },
+    "San Vicente / Granadinas": {
+        "search_name": "St Vincent and the Grenadines",
+        "aliases": ["DEMO2"]
+    },
+    "EE. UU.": {
+        "search_name": "USA",
+        "aliases": ["DEMO2"]
+    },
+    "Inter Bogotá": {
+        "search_name": "Internacional de Bogotá",
+        "aliases": ["DEMO2"]
+    },
+    "DEMO": {
+        "search_name": "DEMO",
+        "aliases": ["DEMO2"]
+    },
+    "DEMO": {
+        "search_name": "DEMO",
+        "aliases": ["DEMO2"]
+    },
+    "DEMO": {
+        "search_name": "DEMO",
+        "aliases": ["DEMO2"]
+    },
+    "DEMO": {
+        "search_name": "DEMO",
+        "aliases": ["DEMO2"]
+    },
+    "DEMO": {
+        "search_name": "DEMO",
+        "aliases": ["DEMO2"]
+    },
+    "DEMO": {
+        "search_name": "DEMO",
+        "aliases": ["DEMO2"]
+    },
+    "DEMO": {
+        "search_name": "DEMO",
+        "aliases": ["DEMO2"]
+    },
+    "DEMO": {
+        "search_name": "DEMO",
+        "aliases": ["DEMO2"]
+    },
+    "DEMO": {
+        "search_name": "DEMO",
+        "aliases": ["DEMO2"]
+    },
+    "DEMO": {
+        "search_name": "DEMO",
+        "aliases": ["DEMO2"]
+    }
+}
