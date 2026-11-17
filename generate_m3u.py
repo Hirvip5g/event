@@ -65,7 +65,6 @@ def build_info_base64_url(video_id: str) -> str:
 def extraer_transmision(video_id: str, session: requests.Session, global_auth: str):
     """Extrae el enlace MPD y la licencia de un videoId específico."""
     try:
-        # 1. Obtener token de video para el ID
         video_token_url = f"https://web.per.vix.tv/api/video/token?videoId={video_id}"
         headers = {
             "authorization": f"Bearer {global_auth}",
@@ -85,10 +84,8 @@ def extraer_transmision(video_id: str, session: requests.Session, global_auth: s
         if not video_token:
             return None, None
             
-        # 2. Combinar token con la info de macros
         combined_token = f"{video_token}.{build_info_base64_url(video_id)}"
         
-        # 3. Consultar Lura para el manifiesto de video
         lura_url = LURA_PLAY_URL.format(video_id)
         lura_headers = {
             "accept": "*/*",
@@ -99,7 +96,6 @@ def extraer_transmision(video_id: str, session: requests.Session, global_auth: s
         lura_resp = session.post(lura_url, data={"token": combined_token}, headers=lura_headers, timeout=10)
         lura_data = lura_resp.json()
         
-        # 4. Encontrar el .mpd y licenseUrl
         for item in lura_data.get("content", {}).get("media", []):
             url = item.get("url", "")
             lic = item.get("licenseUrl", "")
@@ -112,26 +108,17 @@ def extraer_transmision(video_id: str, session: requests.Session, global_auth: s
 
 def main():
     session = requests.Session()
-    # Usar un User-Agent global para prevenir bloqueos por parte del servidor web
     session.headers.update({"User-Agent": DEFAULT_USER_AGENT})
     
     print("[*] Descargando cartelera de eventos...")
     try:
         resp = session.get(EVENTOS_JSON_URL, timeout=10)
-        print(f"[*] Código HTTP de respuesta: {resp.status_code}")
         eventos = resp.json()
-    except requests.exceptions.JSONDecodeError:
-        print("[-] El servidor respondió, pero el contenido NO es un JSON válido.")
-        print("[-] Contenido recibido:")
-        print(resp.text[:500])
-        return
     except Exception as e:
         print(f"[-] Error al descargar el JSON de eventos: {e}")
         return
 
-    print(f"[*] Se encontraron {len(eventos)} eventos en la cartelera.")
-    
-    print("[*] Obteniendo credenciales globales de acceso (Token)...")
+    print(f"[*] Obteniendo credenciales globales de acceso (Token)...")
     try:
         token_resp = session.get(TOKEN_ENDPOINT, timeout=10)
         global_auth = token_resp.json().get("authorization")
@@ -142,32 +129,42 @@ def main():
         print(f"[-] Error obteniendo el token principal: {e}")
         return
 
-    # Procesar cada evento de la lista
+    lista_salida = []
+
     for evento in eventos:
-        titulo = evento.get("title")
-        desc = evento.get("desc")
+        evento_copia = evento.copy()
         url_evento = evento.get("url", "")
         
-        # Extraer el 'id' desde la URL del evento usando un pequeño truco de parsing
         video_id = None
         if "id=" in url_evento:
             video_id = url_evento.split("id=")[1].split("&")[0]
         elif "NoKey" in evento:
             video_id = evento["NoKey"]
             
-        print(f"\n--------------------------------------------------")
-        print(f"Evento: {titulo} ({desc})")
-        print(f"Video ID: {video_id or 'No disponible'}")
+        print(f"Procesando: {evento.get('title')} (ID: {video_id})")
         
         if video_id:
             mpd, license_url = extraer_transmision(video_id, session, global_auth)
             if mpd:
-                print(f" > [✔] MPD: {mpd}")
-                print(f" > [✔] Licencia: {license_url}")
+                evento_copia["mpd_url"] = mpd
+                evento_copia["license_url"] = license_url
+                print(" -> [✔] Enlaces extraídos con éxito.")
             else:
-                print(" > [✘] No se pudo extraer la transmisión (puede que el evento haya finalizado o requiera otro flujo).")
+                evento_copia["mpd_url"] = None
+                evento_copia["license_url"] = None
+                print(" -> [✘] No se pudo extraer la transmisión.")
         else:
-            print(" > [✘] No se encontró un ID válido para procesar.")
+            evento_copia["mpd_url"] = None
+            evento_copia["license_url"] = None
+            
+        lista_salida.append(evento_copia)
+
+    # Guarda los resultados en un JSON limpio para el repositorio
+    output_filename = "eventos_con_streams.json"
+    with open(output_filename, "w", encoding="utf-8") as f:
+        json.dump(lista_salida, f, indent=4, ensure_ascii=False)
+        
+    print(f"\n[*] ¡Listo! Archivo JSON generado: {output_filename}")
 
 if __name__ == "__main__":
     main()
