@@ -112,11 +112,19 @@ def extraer_transmision(video_id: str, session: requests.Session, global_auth: s
 
 def main():
     session = requests.Session()
+    # Usar un User-Agent global para prevenir bloqueos por parte del servidor web
+    session.headers.update({"User-Agent": DEFAULT_USER_AGENT})
     
     print("[*] Descargando cartelera de eventos...")
     try:
         resp = session.get(EVENTOS_JSON_URL, timeout=10)
+        print(f"[*] Código HTTP de respuesta: {resp.status_code}")
         eventos = resp.json()
+    except requests.exceptions.JSONDecodeError:
+        print("[-] El servidor respondió, pero el contenido NO es un JSON válido.")
+        print("[-] Contenido recibido:")
+        print(resp.text[:500])
+        return
     except Exception as e:
         print(f"[-] Error al descargar el JSON de eventos: {e}")
         return
