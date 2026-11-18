@@ -9,7 +9,7 @@
                     "name": "UEFA Women's Champions League",
                     "logo": "https://r2.thesportsdb.com/images/media/league/badge/nsi55h1761838458.png",
                     "image": "",
-                    "background": "",
+                    "background": "https://i.ibb.co/KpcycgkN/championsf.jpg",
                     "events": [
                         {
                             "title": "Real Madrid vs Inter Milano",
@@ -243,7 +243,7 @@
                     ],
                     "flagCode": "",
                     "flagUrl": "",
-                    "leagueId": ""
+                    "leagueId": "name"
                 },
                 {
                     "name": "Liga 1",
@@ -871,5 +871,5 @@
             ]
         }
     ],
-    "updated": "2026-11-18 09:54:18"
+    "updated": "2026-11-18 09:58:25"
 }
