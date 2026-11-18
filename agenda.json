@@ -7,7 +7,7 @@
             "leagues": [
                 {
                     "name": "UEFA Women's Champions League",
-                    "logo": "",
+                    "logo": "https://r2.thesportsdb.com/images/media/league/badge/nsi55h1761838458.png",
                     "image": "",
                     "background": "",
                     "events": [
@@ -22,8 +22,8 @@
                             "logo": "",
                             "homeTeam": "Real Madrid",
                             "awayTeam": "Inter Milano",
-                            "homeLogo": "",
-                            "awayLogo": "",
+                            "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/buhef11664011241.png/medium",
+                            "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/59ms3c1641958694.png/medium",
                             "imageMode": "",
                             "duration": 130,
                             "extraTime": 0,
@@ -143,7 +143,8 @@
                             "flagCode": "",
                             "flagUrl": "",
                             "homeCountryCode": "",
-                            "awayCountryCode": ""
+                            "awayCountryCode": "",
+                            "sourceEventUrl": "https://www.thesportsdb.com/event/2599924-real-madrid-femenino-vs-inter-milano-women"
                         },
                         {
                             "title": "Chelsea FC vs PSG",
@@ -869,5 +870,5 @@
             ]
         }
     ],
-    "updated": "2026-11-18 09:41:03"
+    "updated": "2026-11-18 09:43:16"
 }
