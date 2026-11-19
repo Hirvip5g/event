@@ -2,6 +2,7 @@ import os
 import json
 import re
 import urllib.parse
+import hashlib
 import requests
 import unicodedata
 import base64
@@ -9,7 +10,7 @@ import pyrebase
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
-# Configuración de Firebase cargada dinámicamente desde variables de entorno (GitHub Secrets)
+# Configuración de Firebase cargada dinámicamente desde variables de entorno (GitHub Secrets)[cite: 2]
 firebaseConfig = {
     "apiKey": os.environ.get("FIREBASE_API_KEY"),
     "authDomain": os.environ.get("FIREBASE_AUTH_DOMAIN"),
@@ -23,18 +24,20 @@ firebaseConfig = {
 firebase = pyrebase.initialize_app(firebaseConfig)
 db = firebase.database()
 
-# Configuración de URLs y archivos locales[cite: 5]
-AGENDA_JS_URL = "https://deportestvhd.me/eventos.js"
-LOCAL_CHANNELS_JSON = "04.json"
-SOURCE_JSON = "source.json"
-CLUB_JSON = "club.json"
-EQUIPOS_JSON = "equipos.json"
-LIGAS_JSON = "ligas.json"
-OUTPUT_JSON = "agenda.json"
+# Configuración de URLs y archivos locales[cite: 2]
+AGENDA_JS_URL = "https://deportestvhd.me/eventos.js"[cite: 2]
+LOCAL_CHANNELS_JSON = "04.json"[cite: 2]
+SOURCE_JSON = "source.json"[cite: 2]
+CLUB_JSON = "club.json"[cite: 2]
+EQUIPOS_JSON = "equipos.json"[cite: 2]
+LIGAS_JSON = "ligas.json"[cite: 2]
+OUTPUT_JSON = "agenda.json"[cite: 2]
+HASH_FILE = ".eventos_hash.txt"
+FECHA_FILE = ".ultima_actualizacion_dia.txt"
 
-# Zonas horarias de origen (Madrid) y destino (Lima)[cite: 5]
-ZONA_MADRID = ZoneInfo("Europe/Madrid")
-ZONA_LIMA = ZoneInfo("America/Lima")
+# Zonas horarias de origen (Madrid) y destino (Lima)[cite: 2]
+ZONA_MADRID = ZoneInfo("Europe/Madrid")[cite: 2]
+ZONA_LIMA = ZoneInfo("America/Lima")[cite: 2]
 
 class CaseInsensitiveDict(dict):
     def __init__(self, data=None, **kwargs):
@@ -62,7 +65,7 @@ class CaseInsensitiveDict(dict):
 
     def get(self, key, default=None):
         return super().get(self._normalize(key), default)
-        
+
     def update(self, E=None, **F):
         if E is not None:
             if hasattr(E, 'keys'):
@@ -108,7 +111,7 @@ def obtener_datos_liga_thesportsdb(league_input):
         url = league_input
     else:
         url = f"https://www.thesportsdb.com/league/{league_input}"
-        
+
     eventos_dict = {}
     league_logo = ""
     try:
@@ -119,7 +122,7 @@ def obtener_datos_liga_thesportsdb(league_input):
             match_logo = re.search(r'<meta property="og:image" content="([^"]+)"', html_content)
             if match_logo:
                 league_logo = match_logo.group(1)
-            
+
             matches = re.findall(r'<a\s+href=["\'](/event/(\d+)-([^"\']+))["\']', html_content)
             for full_path, event_id, event_slug in matches:
                 event_url = f"https://www.thesportsdb.com{full_path}"
@@ -141,7 +144,7 @@ def obtener_detalles_de_evento_web(event_url):
             match_thumb = re.search(r'<meta\s+property="og:image"\s+content="([^"]+)"', html)
             if match_thumb:
                 thumb = match_thumb.group(1)
-            
+
             matches_badges = re.findall(r'src=["\'](https://r2\.thesportsdb.com/images/media/team/badge/[^"\']+\.png(?:/[a-z]+)?)["\']', html)
             if len(matches_badges) >= 2:
                 home_logo_web = matches_badges[0]
@@ -166,41 +169,41 @@ def obtener_alias_equipo(equipo_nombre, clubs_dict):
     palabras_clave = [limpiar_para_comparar(equipo_nombre)]
     if not clubs_dict:
         return palabras_clave
-    
+
     nombre_clean = limpiar_para_comparar(equipo_nombre)
     for club_key, info in clubs_dict.items():
         key_clean = limpiar_para_comparar(club_key)
         aliases = info.get("aliases", []) if isinstance(info, dict) else []
         search_name = info.get("search_name", "") if isinstance(info, dict) else ""
-        
+
         aliases_clean = [limpiar_para_comparar(a) for a in aliases]
         if search_name:
             aliases_clean.append(limpiar_para_comparar(search_name))
-            
+
         if nombre_clean == key_clean or nombre_clean in aliases_clean:
             palabras_clave.append(key_clean)
             palabras_clave.extend(aliases_clean)
             break
-            
+
     return list(set(filter(None, palabras_clave)))
 
 def buscar_evento_web(league_name, original_title, home_team, away_team, web_events_dict, clubs_dict):
     if not web_events_dict:
         return ""
-    
+
     ln_upper = league_name.upper()
     if "F1" in ln_upper or "FORMULA" in ln_upper or "MOTOGP" in ln_upper:
         sesion_buscada = traducir_sesion(original_title)
         keywords_extra = obtener_alias_equipo(original_title, clubs_dict)
         titulo_norm = limpiar_para_comparar(original_title)
-        
+
         mejor_url = ""
         max_puntuacion = -1
 
         for web_slug, web_url in web_events_dict.items():
             web_slug_clean = limpiar_para_comparar(web_slug)
             puntuacion = 0
-            
+
             if sesion_buscada and sesion_buscada in web_slug_clean:
                 puntuacion += 10
             for kw in keywords_extra:
@@ -225,7 +228,7 @@ def buscar_evento_web(league_name, original_title, home_team, away_team, web_eve
             web_slug_clean = limpiar_para_comparar(web_slug)
             match_home = any(kw and kw in web_slug_clean for kw in home_keywords)
             match_away = any(kw and kw in web_slug_clean for kw in away_keywords)
-            
+
             if match_home and match_away:
                 return web_url
     return ""
@@ -255,7 +258,54 @@ def obtener_duracion_por_deporte(sport_id):
     return 130
 
 def procesar_agenda():
-    # Cargar equipos.json con manejo de mayúsculas/minúsculas en claves[cite: 5]
+    print(f"Descargando script de eventos desde {AGENDA_JS_URL}...")
+    try:
+        headers = {"User-Agent": "Mozilla/5.0"}
+        response = requests.get(AGENDA_JS_URL, headers=headers, timeout=10)
+        if response.status_code != 200:
+            print(f"Error al descargar el archivo JS. Código de estado: {response.status_code}")
+            return
+
+        js_content = response.text
+        hoy_str = datetime.now(ZONA_LIMA).strftime("%Y-%m-%d")
+        nuevo_hash = hashlib.sha256(js_content.encode("utf-8")).hexdigest()
+
+        hash_anterior = ""
+        if os.path.exists(HASH_FILE):
+            with open(HASH_FILE, "r", encoding="utf-8") as f:
+                hash_anterior = f.read().strip()
+
+        ultima_fecha_actualizada = ""
+        if os.path.exists(FECHA_FILE):
+            with open(FECHA_FILE, "r", encoding="utf-8") as f:
+                ultima_fecha_actualizada = f.read().strip()
+
+        # 1. Solo actualizar si el contenido de eventos.js cambió
+        if nuevo_hash == hash_anterior:
+            print("No hubo cambios en eventos.js. Se omite la actualización.")
+            return
+
+        # 2. Máximo 1 actualización por día aunque eventos.js cambie varias veces hoy
+        if ultima_fecha_actualizada == hoy_str:
+            print(f"eventos.js cambió, pero hoy ({hoy_str}) ya se realizó la actualización diaria. Se espera hasta mañana.")
+            return
+
+        match_json = re.search(r'const\s+EVENTOS_DATA\s*=\s*(\[[\s\S]*?\]);\s*(?:const|let|var|\Z)', js_content)
+        if not match_json:
+            match_json = re.search(r'=\s*(\[[\s\S]*\])\s*;?\s*$', js_content)
+
+        if match_json:
+            json_str = match_json.group(1)
+            raw_data = json.loads(json_str)
+        else:
+            print("No se pudo extraer el arreglo JSON de eventos.js con expresiones regulares.")
+            return
+
+    except Exception as e:
+        print(f"Error al procesar eventos.js: {e}")
+        return
+
+    # Cargar equipos.json con manejo de mayúsculas/minúsculas en claves[cite: 2]
     equipos_dict = CaseInsensitiveDict()
     if os.path.exists(EQUIPOS_JSON):
         try:
@@ -266,7 +316,7 @@ def procesar_agenda():
         except Exception as e:
             print(f"Error al leer {EQUIPOS_JSON}: {e}")
 
-    # Cargar ligas.json con manejo de mayúsculas/minúsculas en claves[cite: 5]
+    # Cargar ligas.json con manejo de mayúsculas/minúsculas en claves[cite: 2]
     ligas_dict = CaseInsensitiveDict()
     if os.path.exists(LIGAS_JSON):
         try:
@@ -301,30 +351,6 @@ def procesar_agenda():
         except Exception as e:
             print(f"Error al leer {CLUB_JSON}: {e}")
 
-    print(f"Descargando script de eventos desde {AGENDA_JS_URL}...")
-    try:
-        headers = {"User-Agent": "Mozilla/5.0"}
-        response = requests.get(AGENDA_JS_URL, headers=headers, timeout=10)
-        if response.status_code != 200:
-            print(f"Error al descargar el archivo JS. Código de estado: {response.status_code}")
-            return
-        
-        js_content = response.text
-        match_json = re.search(r'const\s+EVENTOS_DATA\s*=\s*(\[[\s\S]*?\]);\s*(?:const|let|var|\Z)', js_content)
-        if not match_json:
-            match_json = re.search(r'=\s*(\[[\s\S]*\])\s*;?\s*$', js_content)
-            
-        if match_json:
-            json_str = match_json.group(1)
-            raw_data = json.loads(json_str)
-        else:
-            print("No se pudo extraer el arreglo JSON de eventos.js con expresiones regulares.")
-            return
-
-    except Exception as e:
-        print(f"Error al procesar eventos.js: {e}")
-        return
-
     sports_map = {}
     order_counter = 1
 
@@ -334,10 +360,10 @@ def procesar_agenda():
             raw_titulo = item.get("titulo", "")
             time_val = item.get("hora", "").strip()
             date_val = item.get("fecha", "").strip()
-            
+
             status = item.get("status", item.get("estado", ""))
             code_val = item.get("code", item.get("codigo", ""))
-            
+
             if date_val:
                 fecha_evento = datetime.strptime(date_val, "%Y-%m-%d").date()
             else:
@@ -360,17 +386,17 @@ def procesar_agenda():
 
             dt_lima = dt_madrid.astimezone(ZONA_LIMA)
             date = fecha_evento.strftime("%Y-%m-%d")
-            
+
             full_time_str = f"{date}T{dt_lima.strftime('%H:%M:%S')}{dt_lima.strftime('%z')[:3]}:{dt_lima.strftime('%z')[3:]}"
 
             league_name = category
             event_title = raw_titulo
-            
+
             if ":" in raw_titulo:
                 parts = raw_titulo.split(":", 1)
                 potential_league = parts[0].strip()
                 potential_title = parts[1].strip()
-                
+
                 codes_directos = ["nfl", "f1", "motogp", "nba", "ufc", "nhl"]
                 if category.lower() in codes_directos:
                     league_name = category
@@ -445,7 +471,7 @@ def procesar_agenda():
                 canal_nombre = canal.get("nombre", "").strip()
                 canal_calidad = canal.get("calidad", "")
                 link_enc = canal.get("url", "")
-                
+
                 link_limpio = link_enc
                 if "?r=" in link_enc:
                     try:
@@ -506,7 +532,7 @@ def procesar_agenda():
 
     web_events_por_liga = {}
     logos_liga_por_liga = {}
-    
+
     for league_key, data in sources_ligas.items():
         if isinstance(data, dict):
             league_url = data.get("url", "")
@@ -518,12 +544,12 @@ def procesar_agenda():
         if league_url and league_url != "demo":
             print(f"Obteniendo eventos y logo web de TheSportsDB para la liga '{league_key}'...")
             eventos_remotos, league_logo = obtener_datos_liga_thesportsdb(league_url)
-            
+
             for alias in aliases:
                 alias_clean = alias.lower().strip()
                 web_events_por_liga[alias_clean] = eventos_remotos
                 logos_liga_por_liga[alias_clean] = league_logo
-                
+
             league_key_clean = league_key.lower().strip()
             web_events_por_liga[league_key_clean] = eventos_remotos
             logos_liga_por_liga[league_key_clean] = league_logo
@@ -532,8 +558,8 @@ def procesar_agenda():
         for sport in agenda_data["sports"]:
             for league in sport.get("leagues", []):
                 league_name = league.get("name", "")
-                
-                # Asignación de leagueId y background desde ligas.json[cite: 5]
+
+                # Asignación de leagueId y background desde ligas.json[cite: 2]
                 liga_info = ligas_dict.get(league_name, {})
                 if isinstance(liga_info, dict):
                     league["leagueId"] = liga_info.get("leagueId", "")
@@ -543,7 +569,7 @@ def procesar_agenda():
                 web_events = {}
                 league_logo_web = ""
                 league_name_lower = league_name.lower().strip()
-                
+
                 if league_name_lower in web_events_por_liga:
                     web_events = web_events_por_liga[league_name_lower]
                     league_logo_web = logos_liga_por_liga.get(league_name_lower, "")
@@ -561,7 +587,7 @@ def procesar_agenda():
                     home_raw = event.get("homeTeam", "")
                     away_raw = event.get("awayTeam", "")
                     original_title = event.get("title", "")
-                    
+
                     is_motor = league_name.upper() in ["F1", "MOTOGP"] or "GP " in home_raw or "Práctica" in away_raw or "Clasificación" in away_raw
                     is_match = bool(home_raw and away_raw) and not is_motor
 
@@ -625,7 +651,7 @@ def procesar_agenda():
                         server_url = server.get("url", "")
                         parsed_url = urllib.parse.urlparse(server_url)
                         query_params = urllib.parse.parse_qs(parsed_url.query)
-                        
+
                         channel_param = query_params.get("channel", [""])[0].strip().lower()
                         if not channel_param:
                             channel_param = query_params.get("stream", [""])[0].strip().lower()
@@ -674,7 +700,7 @@ def procesar_agenda():
                             canales_encontrados_lista = []
                             if channel_param in canales_04_dict:
                                 canales_encontrados_lista.extend(canales_04_dict[channel_param])
-                            
+
                             for k_04, lista_canales in canales_04_dict.items():
                                 for c_info in lista_canales:
                                     c_channel = c_info.get("channel", "").strip().lower()
@@ -700,16 +726,22 @@ def procesar_agenda():
 
                     event["servers"] = nuevos_servidores
 
-    # Guardar localmente (puedes quitar este bloque si ya no quieres el archivo en el repo)[cite: 5]
+    # Guardar localmente[cite: 2]
     with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
         json.dump(agenda_data, f, ensure_ascii=False, indent=4)
     print(f"Agenda procesada correctamente en {OUTPUT_JSON}.")
 
-    # Enviar directamente a Firebase usando firebaseConfig
+    # Enviar directamente a Firebase usando firebaseConfig[cite: 2]
     try:
         print("Subiendo agenda procesada a Firebase Realtime Database...")
         db.child("config").child("ventanatv").child("agendaData").set(agenda_data)
         print("¡Agenda enviada y sincronizada en Firebase exitosamente!")
+
+        # Guardar hash y fecha solo tras completar la actualización sin errores
+        with open(HASH_FILE, "w", encoding="utf-8") as f:
+            f.write(nuevo_hash)
+        with open(FECHA_FILE, "w", encoding="utf-8") as f:
+            f.write(hoy_str)
     except Exception as e:
         print(f"Error al subir a Firebase: {e}")
 
