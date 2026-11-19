@@ -1,44 +1,44 @@
 name: Actualizar Agenda Automática
 
 on:
-  workflow_dispatch: # Permite ejecutarlo manualmente desde GitHub[cite: 2]
+  workflow_dispatch: # Permite ejecutarlo manualmente desde GitHub[cite: 1]
   schedule:
-    - cron: '0 */6 * * *' # Se ejecuta automáticamente cada 6 horas[cite: 2]
+    - cron: '0 */6 * * *' # Revisa cada 6 horas, pero el script limita a máximo 1 actualización al día[cite: 1]
 
 permissions:
-  contents: write
+  contents: write[cite: 1]
 
 jobs:
   update-agenda:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest[cite: 1]
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4[cite: 1]
 
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.x'[cite: 1]
 
       - name: Instalar dependencias
-        run: pip install requests pyrebase4
+        run: pip install requests pyrebase4[cite: 1]
 
       - name: Procesar Agenda
         env:
-          FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}
-          FIREBASE_AUTH_DOMAIN: ${{ secrets.FIREBASE_AUTH_DOMAIN }}
-          FIREBASE_DATABASE_URL: ${{ secrets.FIREBASE_DATABASE_URL }}
-          FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}
-          FIREBASE_STORAGE_BUCKET: ${{ secrets.FIREBASE_STORAGE_BUCKET }}
-          FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}
-          FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}
-        run: python procesar_eventos_manual.py  # O procesar_eventos_manual_2.py según corresponda[cite: 2]
+          FIREBASE_API_KEY: ${{ secrets.FIREBASE_API_KEY }}[cite: 1]
+          FIREBASE_AUTH_DOMAIN: ${{ secrets.FIREBASE_AUTH_DOMAIN }}[cite: 1]
+          FIREBASE_DATABASE_URL: ${{ secrets.FIREBASE_DATABASE_URL }}[cite: 1]
+          FIREBASE_PROJECT_ID: ${{ secrets.FIREBASE_PROJECT_ID }}[cite: 1]
+          FIREBASE_STORAGE_BUCKET: ${{ secrets.FIREBASE_STORAGE_BUCKET }}[cite: 1]
+          FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.FIREBASE_MESSAGING_SENDER_ID }}[cite: 1]
+          FIREBASE_APP_ID: ${{ secrets.FIREBASE_APP_ID }}[cite: 1]
+        run: python procesar_eventos_manual.py[cite: 1]
 
       - name: Guardar cambios en GitHub (Opcional)
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add agenda.json
-          git commit -m "Agenda actualizada localmente" || exit 0
+          git add agenda.json .eventos_hash.txt .ultima_actualizacion_dia.txt
+          git commit -m "Agenda actualizada (máx. 1 vez al día)" || exit 0
           git pull --rebase origin main
-          git push origin main
+          git push origin main[cite: 1]
