@@ -10,7 +10,7 @@ import pyrebase
 from datetime import datetime, timedelta
 from zoneinfo import ZoneInfo
 
-# Configuración de Firebase cargada dinámicamente desde variables de entorno (GitHub Secrets)[cite: 2]
+# Configuración de Firebase cargada dinámicamente desde variables de entorno (GitHub Secrets)
 firebaseConfig = {
     "apiKey": os.environ.get("FIREBASE_API_KEY"),
     "authDomain": os.environ.get("FIREBASE_AUTH_DOMAIN"),
@@ -24,20 +24,20 @@ firebaseConfig = {
 firebase = pyrebase.initialize_app(firebaseConfig)
 db = firebase.database()
 
-# Configuración de URLs y archivos locales[cite: 2]
-AGENDA_JS_URL = "https://deportestvhd.me/eventos.js"[cite: 2]
-LOCAL_CHANNELS_JSON = "04.json"[cite: 2]
-SOURCE_JSON = "source.json"[cite: 2]
-CLUB_JSON = "club.json"[cite: 2]
-EQUIPOS_JSON = "equipos.json"[cite: 2]
-LIGAS_JSON = "ligas.json"[cite: 2]
-OUTPUT_JSON = "agenda.json"[cite: 2]
+# Configuración de URLs y archivos locales
+AGENDA_JS_URL = "https://deportestvhd.me/eventos.js"
+LOCAL_CHANNELS_JSON = "04.json"
+SOURCE_JSON = "source.json"
+CLUB_JSON = "club.json"
+EQUIPOS_JSON = "equipos.json"
+LIGAS_JSON = "ligas.json"
+OUTPUT_JSON = "agenda.json"
 HASH_FILE = ".eventos_hash.txt"
 FECHA_FILE = ".ultima_actualizacion_dia.txt"
 
-# Zonas horarias de origen (Madrid) y destino (Lima)[cite: 2]
-ZONA_MADRID = ZoneInfo("Europe/Madrid")[cite: 2]
-ZONA_LIMA = ZoneInfo("America/Lima")[cite: 2]
+# Zonas horarias de origen (Madrid) y destino (Lima)
+ZONA_MADRID = ZoneInfo("Europe/Madrid")
+ZONA_LIMA = ZoneInfo("America/Lima")
 
 class CaseInsensitiveDict(dict):
     def __init__(self, data=None, **kwargs):
@@ -305,7 +305,7 @@ def procesar_agenda():
         print(f"Error al procesar eventos.js: {e}")
         return
 
-    # Cargar equipos.json con manejo de mayúsculas/minúsculas en claves[cite: 2]
+    # Cargar equipos.json con manejo de mayúsculas/minúsculas en claves
     equipos_dict = CaseInsensitiveDict()
     if os.path.exists(EQUIPOS_JSON):
         try:
@@ -316,7 +316,7 @@ def procesar_agenda():
         except Exception as e:
             print(f"Error al leer {EQUIPOS_JSON}: {e}")
 
-    # Cargar ligas.json con manejo de mayúsculas/minúsculas en claves[cite: 2]
+    # Cargar ligas.json con manejo de mayúsculas/minúsculas en claves
     ligas_dict = CaseInsensitiveDict()
     if os.path.exists(LIGAS_JSON):
         try:
@@ -559,7 +559,7 @@ def procesar_agenda():
             for league in sport.get("leagues", []):
                 league_name = league.get("name", "")
 
-                # Asignación de leagueId y background desde ligas.json[cite: 2]
+                # Asignación de leagueId y background desde ligas.json
                 liga_info = ligas_dict.get(league_name, {})
                 if isinstance(liga_info, dict):
                     league["leagueId"] = liga_info.get("leagueId", "")
@@ -726,12 +726,12 @@ def procesar_agenda():
 
                     event["servers"] = nuevos_servidores
 
-    # Guardar localmente[cite: 2]
+    # Guardar localmente
     with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
         json.dump(agenda_data, f, ensure_ascii=False, indent=4)
     print(f"Agenda procesada correctamente en {OUTPUT_JSON}.")
 
-    # Enviar directamente a Firebase usando firebaseConfig[cite: 2]
+    # Enviar directamente a Firebase usando firebaseConfig
     try:
         print("Subiendo agenda procesada a Firebase Realtime Database...")
         db.child("config").child("ventanatv").child("agendaData").set(agenda_data)
