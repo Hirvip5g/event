@@ -223,21 +223,21 @@
         "url": "https://www.thesportsdb.com/league/5339-italian-serie-c-girone-b",
         "aliases": ["Italian Serie C Girone B"]
     },
-    "demo": {
-        "url": "demo",
-        "aliases": ["demo"]
+    "Copa Mundial Sub-17": {
+        "url": "https://www.thesportsdb.com/league/5416-fifa-u-17-world-cup",
+        "aliases": ["FIFA U-17 World Cup"]
     },
-    "demo": {
-        "url": "demo",
-        "aliases": ["demo"]
+    "Liga Profesional Saudí": {
+        "url": "https://www.thesportsdb.com/league/4668-saudi-arabian-pro-league",
+        "aliases": ["Saudi-Arabian Pro League"]
     },
-    "demo": {
-        "url": "demo",
-        "aliases": ["demo"]
+    "Primera División": {
+        "url": "https://www.thesportsdb.com/league/4627-chile-primera-division",
+        "aliases": ["Chile Primera Division"]
     },
-    "demo": {
-        "url": "demo",
-        "aliases": ["demo"]
+    "Copa de Portugal": {
+        "url": "https://www.thesportsdb.com/league/4510-taca-de-portugal",
+        "aliases": ["Taca de Portugal"]
     },
     "demo": {
         "url": "demo",
