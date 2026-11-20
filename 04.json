@@ -329,7 +329,8 @@
     "logo": "https://raw.githubusercontent.com/CINECITY2023/cinecity/refs/heads/cinecity.net/logos/deportes/CHskysportslaliga.png",
     "grupo": "Deportes",
     "userAgent": "izzigo/11.5.1(18)_prd izzigo ahh (Linux;Android 16) AndroidXMedia3/1.0.2",
-    "referer": "https://www.izzigo.tv/webclient/",
+    "referer": "https://www.izzigo.tv/",
+    "origin": "https://www.izzigo.tv",
     "tipo": "clearkey",
     "clearkey": {
       "keyId": "cb80e1e7d7598eaf98b1dbbe6dc14ee9",
@@ -343,7 +344,8 @@
     "logo": "https://raw.githubusercontent.com/CINECITY2023/cinecity/refs/heads/cinecity.net/logos/deportes/CHskysportslaliga.png",
     "grupo": "Deportes",
     "userAgent": "izzigo/11.5.1(18)_prd izzigo ahh (Linux;Android 16) AndroidXMedia3/1.0.2",
-    "referer": "https://www.izzigo.tv/webclient/",
+    "referer": "https://www.izzigo.tv/",
+    "origin": "https://www.izzigo.tv",
     "tipo": "clearkey",
     "clearkey": {
       "keyId": "cb80e1e7d7598eaf98b1dbbe6dc14ee9",
