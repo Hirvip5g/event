@@ -7,7 +7,7 @@
             "leagues": [
                 {
                     "name": "Copa Mundial Sub-17",
-                    "logo": "",
+                    "logo": "https://r2.thesportsdb.com/images/media/league/badge/yfm4a01779473539.png",
                     "image": "",
                     "background": "",
                     "events": [
@@ -22,8 +22,8 @@
                             "logo": "",
                             "homeTeam": "Bélgica Sub-17",
                             "awayTeam": "Vietnam Sub-17",
-                            "homeLogo": "",
-                            "awayLogo": "",
+                            "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/7eymck1731986767.png/medium",
+                            "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/sziz3d1779469010.png/medium",
                             "imageMode": "",
                             "duration": 130,
                             "extraTime": 0,
@@ -44,7 +44,8 @@
                             "flagCode": "",
                             "flagUrl": "",
                             "homeCountryCode": "",
-                            "awayCountryCode": ""
+                            "awayCountryCode": "",
+                            "sourceEventUrl": "https://www.thesportsdb.com/event/2476391-belgium-u17-vs-vietnam-u17"
                         },
                         {
                             "title": "España Sub-17 vs China PR Sub-17",
@@ -57,8 +58,8 @@
                             "logo": "",
                             "homeTeam": "España Sub-17",
                             "awayTeam": "China PR Sub-17",
-                            "homeLogo": "",
-                            "awayLogo": "",
+                            "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/sw2onx1730999560.png/medium",
+                            "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/pxsagh1779468650.png/medium",
                             "imageMode": "",
                             "duration": 130,
                             "extraTime": 0,
@@ -106,7 +107,8 @@
                             "flagCode": "",
                             "flagUrl": "",
                             "homeCountryCode": "",
-                            "awayCountryCode": ""
+                            "awayCountryCode": "",
+                            "sourceEventUrl": "https://www.thesportsdb.com/event/2476389-spain-u17-vs-china-u17"
                         },
                         {
                             "title": "Italia Sub-17 vs Jamaica Sub-17",
@@ -119,8 +121,8 @@
                             "logo": "",
                             "homeTeam": "Italia Sub-17",
                             "awayTeam": "Jamaica Sub-17",
-                            "homeLogo": "",
-                            "awayLogo": "",
+                            "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/o7tny81731992143.png/medium",
+                            "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/tx74jk1776444952.png/medium",
                             "imageMode": "",
                             "duration": 130,
                             "extraTime": 0,
@@ -178,7 +180,8 @@
                             "flagCode": "",
                             "flagUrl": "",
                             "homeCountryCode": "",
-                            "awayCountryCode": ""
+                            "awayCountryCode": "",
+                            "sourceEventUrl": "https://www.thesportsdb.com/event/2476385-italy-u17-vs-jamaica-u17"
                         },
                         {
                             "title": "Senegal Sub-17 vs Croacia Sub-17",
@@ -187,13 +190,13 @@
                             "time": "2026-11-20T10:30:00-05:00",
                             "timezone": "America/Lima",
                             "agendaOrder": 4,
-                            "image": "",
+                            "image": "https://r2.thesportsdb.com/images/media/event/thumb/5xehzb1763690084.jpg",
                             "logo": "",
                             "homeTeam": "Senegal Sub-17",
                             "awayTeam": "Croacia Sub-17",
-                            "homeLogo": "",
-                            "awayLogo": "",
-                            "imageMode": "",
+                            "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/wg09dx1731000589.png/medium",
+                            "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/gw7qqn1731987551.png/medium",
+                            "imageMode": "banner",
                             "duration": 130,
                             "extraTime": 0,
                             "status": "",
@@ -213,7 +216,8 @@
                             "flagCode": "",
                             "flagUrl": "",
                             "homeCountryCode": "",
-                            "awayCountryCode": ""
+                            "awayCountryCode": "",
+                            "sourceEventUrl": "https://www.thesportsdb.com/event/2476388-senegal-u17-vs-croatia-u17"
                         }
                     ],
                     "flagCode": "",
@@ -222,7 +226,7 @@
                 },
                 {
                     "name": "Liga Profesional Saudí",
-                    "logo": "https://r2.thesportsdb.com/images/media/league/badge/rk9xhx1768238251.png",
+                    "logo": "https://r2.thesportsdb.com/images/media/league/badge/w67i621701772123.png",
                     "image": "",
                     "background": "",
                     "events": [
@@ -233,13 +237,13 @@
                             "time": "2026-11-20T12:30:00-05:00",
                             "timezone": "America/Lima",
                             "agendaOrder": 5,
-                            "image": "",
+                            "image": "https://r2.thesportsdb.com/images/media/event/thumb/pekapv1758292094.jpg",
                             "logo": "",
                             "homeTeam": "Al-Ahli",
                             "awayTeam": "Al Nassr",
-                            "homeLogo": "",
-                            "awayLogo": "",
-                            "imageMode": "",
+                            "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/1bbtgb1755192301.png/medium",
+                            "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/84yvqi1748524565.png/medium",
+                            "imageMode": "banner",
                             "duration": 130,
                             "extraTime": 0,
                             "status": "",
@@ -254,12 +258,23 @@
                                     "languages": [],
                                     "customLanguages": "",
                                     "channelLogo": ""
+                                },
+                                {
+                                    "name": "Fox ONE",
+                                    "url": "https://pruevon.blogspot.com/2026/04/embedc.html?r=https%3A%2F%2Fstreamx723.sbs%2Fglobal1.php%3Fchannel%3Dfoxone6",
+                                    "type": "iframe",
+                                    "quality": "HD",
+                                    "active": true,
+                                    "languages": [],
+                                    "customLanguages": "",
+                                    "channelLogo": ""
                                 }
                             ],
                             "flagCode": "",
                             "flagUrl": "",
                             "homeCountryCode": "",
-                            "awayCountryCode": ""
+                            "awayCountryCode": "",
+                            "sourceEventUrl": "https://www.thesportsdb.com/event/2573374-al-ahli-vs-al-nassr"
                         }
                     ],
                     "flagCode": "",
@@ -268,7 +283,7 @@
                 },
                 {
                     "name": "Primera División",
-                    "logo": "https://r2.thesportsdb.com/images/media/league/badge/3p98xv1740672448.png",
+                    "logo": "https://r2.thesportsdb.com/images/media/league/badge/x9m78e1768232019.png",
                     "image": "",
                     "background": "",
                     "events": [
@@ -283,8 +298,8 @@
                             "logo": "",
                             "homeTeam": "Racing",
                             "awayTeam": "Central Español",
-                            "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/rtsusv1473541178.png/medium",
-                            "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/nu9wnd1624645331.png/medium",
+                            "homeLogo": "",
+                            "awayLogo": "",
                             "imageMode": "",
                             "duration": 130,
                             "extraTime": 0,
@@ -305,8 +320,7 @@
                             "flagCode": "",
                             "flagUrl": "",
                             "homeCountryCode": "",
-                            "awayCountryCode": "",
-                            "sourceEventUrl": "https://www.thesportsdb.com/event/2630166-racing-montevideo-vs-central-espa%c3%b1ol"
+                            "awayCountryCode": ""
                         },
                         {
                             "title": "Cerro vs Nacional",
@@ -319,8 +333,8 @@
                             "logo": "",
                             "homeTeam": "Cerro",
                             "awayTeam": "Nacional",
-                            "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/wtuxsq1464887392.png/medium",
-                            "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/yxi2wi1736387630.png/medium",
+                            "homeLogo": "",
+                            "awayLogo": "",
                             "imageMode": "",
                             "duration": 130,
                             "extraTime": 0,
@@ -341,8 +355,7 @@
                             "flagCode": "",
                             "flagUrl": "",
                             "homeCountryCode": "",
-                            "awayCountryCode": "",
-                            "sourceEventUrl": "https://www.thesportsdb.com/event/2630167-cerro-vs-nacional-montevideo"
+                            "awayCountryCode": ""
                         },
                         {
                             "title": "Liverpool vs Wanderers",
@@ -351,13 +364,13 @@
                             "time": "2026-11-20T14:30:00-05:00",
                             "timezone": "America/Lima",
                             "agendaOrder": 8,
-                            "image": "https://r2.thesportsdb.com/images/media/event/thumb/g7tuw41754653394.jpg",
+                            "image": "",
                             "logo": "",
                             "homeTeam": "Liverpool",
                             "awayTeam": "Wanderers",
-                            "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/0xat6f1678717839.png/medium",
-                            "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/3i6k5s1766114857.png/medium",
-                            "imageMode": "banner",
+                            "homeLogo": "",
+                            "awayLogo": "",
+                            "imageMode": "",
                             "duration": 130,
                             "extraTime": 0,
                             "status": "",
@@ -377,8 +390,7 @@
                             "flagCode": "",
                             "flagUrl": "",
                             "homeCountryCode": "",
-                            "awayCountryCode": "",
-                            "sourceEventUrl": "https://www.thesportsdb.com/event/2630165-liverpool-montevideo-vs-montevideo-wanderers"
+                            "awayCountryCode": ""
                         },
                         {
                             "title": "Cobresal vs Audax Italiano",
@@ -387,13 +399,13 @@
                             "time": "2026-11-20T16:00:00-05:00",
                             "timezone": "America/Lima",
                             "agendaOrder": 14,
-                            "image": "",
+                            "image": "https://r2.thesportsdb.com/images/media/event/thumb/xq6na41769186374.jpg",
                             "logo": "",
                             "homeTeam": "Cobresal",
                             "awayTeam": "Audax Italiano",
-                            "homeLogo": "",
-                            "awayLogo": "",
-                            "imageMode": "",
+                            "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/36tqoo1602187477.png/medium",
+                            "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/xbowln1672950178.png/medium",
+                            "imageMode": "banner",
                             "duration": 130,
                             "extraTime": 0,
                             "status": "",
@@ -413,7 +425,8 @@
                             "flagCode": "",
                             "flagUrl": "",
                             "homeCountryCode": "",
-                            "awayCountryCode": ""
+                            "awayCountryCode": "",
+                            "sourceEventUrl": "https://www.thesportsdb.com/event/2413126-cobresal-vs-audax-italiano"
                         },
                         {
                             "title": "Palestino vs Unión La Calera",
@@ -422,13 +435,13 @@
                             "time": "2026-11-20T18:30:00-05:00",
                             "timezone": "America/Lima",
                             "agendaOrder": 17,
-                            "image": "",
+                            "image": "https://r2.thesportsdb.com/images/media/event/thumb/uqkv2e1779686846.jpg",
                             "logo": "",
                             "homeTeam": "Palestino",
                             "awayTeam": "Unión La Calera",
-                            "homeLogo": "",
-                            "awayLogo": "",
-                            "imageMode": "",
+                            "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/62site1756091114.png/medium",
+                            "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/vadt5t1769834071.png/medium",
+                            "imageMode": "banner",
                             "duration": 130,
                             "extraTime": 0,
                             "status": "",
@@ -448,7 +461,8 @@
                             "flagCode": "",
                             "flagUrl": "",
                             "homeCountryCode": "",
-                            "awayCountryCode": ""
+                            "awayCountryCode": "",
+                            "sourceEventUrl": "https://www.thesportsdb.com/event/2413132-palestino-vs-uni%c3%b3n-la-calera"
                         }
                     ],
                     "flagCode": "",
@@ -909,7 +923,7 @@
                 },
                 {
                     "name": "Copa de Portugal",
-                    "logo": "",
+                    "logo": "https://r2.thesportsdb.com/images/media/league/badge/hyy7lq1593011553.png",
                     "image": "",
                     "background": "",
                     "events": [
@@ -924,8 +938,8 @@
                             "logo": "",
                             "homeTeam": "Porto",
                             "awayTeam": "Paredes",
-                            "homeLogo": "",
-                            "awayLogo": "",
+                            "homeLogo": "https://r2.thesportsdb.com/images/media/team/badge/xu47rb1628855600.png/medium",
+                            "awayLogo": "https://r2.thesportsdb.com/images/media/team/badge/1pnga71640272263.png/medium",
                             "imageMode": "",
                             "duration": 130,
                             "extraTime": 0,
@@ -963,7 +977,8 @@
                             "flagCode": "",
                             "flagUrl": "",
                             "homeCountryCode": "",
-                            "awayCountryCode": ""
+                            "awayCountryCode": "",
+                            "sourceEventUrl": "https://www.thesportsdb.com/event/2624080-porto-vs-paredes"
                         }
                     ],
                     "flagCode": "",
@@ -1874,5 +1889,5 @@
             ]
         }
     ],
-    "updated": "2026-11-20 08:48:36"
+    "updated": "2026-11-20 09:05:49"
 }
