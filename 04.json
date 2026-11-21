@@ -70,6 +70,20 @@
     "url": "https://edge-live23-sl.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzk1MDk0ODgxIiwic2lwIjoiODQuMjMzLjIzNC4xOTUiLCJwYXRoIjoiL2xpdmUvYzZlZHMvTmlja19Kci9TQV9MaXZlX2Rhc2hfZW5jXy8iLCJzZXNzaW9uX2Nkbl9pZCI6IjA5MWE3ZDAxNDA3NTM3M2MiLCJzZXNzaW9uX2lkIjoiIiwiY2xpZW50X2lkIjoiIiwiZGV2aWNlX2lkIjoiIiwibWF4X3Nlc3Npb25zIjowLCJzZXNzaW9uX2R1cmF0aW9uIjowLCJ1cmwiOiJodHRwczovLzIwMS4yMzUuNjYuMTE2IiwiYXVkIjoiMzUzIiwic291cmNlcyI6Wzg1LDE0NCwyMTAsODYsODhdfQ==.oA5G1R7BgRLSEKEB957AwcPz79lrMgxfeiHbyCludFOYHoMbay1cOF83ARKHXVuDOV4kGP71SEtOij71ZYrAvA==/live/c4eds/ESPN2_UY/SA_Live_dash_enc/ESPN2_UY.mpd"
   },
   {
+    "canal": "ESPN 2 COL HD",
+    "channel": "espn2",
+    "logo": "https://i.postimg.cc/D4yRcwg2/ESPN-2-Argentina.png",
+    "grupo": "Deportes",
+    "tipo": "clearkey",
+    "clearkey": {
+      "keyId": "5fafd88bd40f3219bb129800eb108443",
+      "key": "e4b84a2a85d31f0cfb09a0706045f44d"
+    },
+    "referer": "https://portal.app.flow.com.ar",
+    "origin": "https://portal.app.flow.com.ar",
+    "url": "https://2500fff0c9974cafb2b31537448868b7.mediatailor.us-east-1.amazonaws.com/v1/dash/dffceb859a31f14d0ed059ef6b4e2e4d850e60b1/live_1098/1098_ESPN_2_COLOMBIA_DASH/manifest.mpd"
+  },
+  {
     "canal": "ESPN 3 FHD",
     "channel": "espn3",
     "logo": "https://i.postimg.cc/0MCLmw7Z/ESPN-3-Argentina.png",
@@ -97,6 +111,20 @@
     "origin": "",
     "url": "https://b1816077c5854c97966b46adef0bf591.mediatailor.us-east-1.amazonaws.com/v1/dash/dffceb859a31f14d0ed059ef6b4e2e4d850e60b1/live_1106/1106_ESPN_COLOMBIA_HD_DASH/manifest.mpd"
 },
+{
+    "canal": "Telemundo HD",
+    "channel": "telemundo",
+    "logo": "https://r2.thesportsdb.com/images/media/channel/logo/mq2tu41660762188.png",
+    "grupo": "Deportes",
+    "tipo": "clearkey",
+    "clearkey": {
+        "keyId": "a0954e4858cc2c0e7e4c85cc57ccb5d3",
+        "key": "fef591636b2732d9624bdfd624dddcc5"
+    },
+    "referer": "https://www.telemundo.com/",
+    "origin": "https://www.telemundo.com",
+    "url": "https://vi-cache02.atnicdn.com/live/edsche/viya_telemundo/dash/viya_telemundo.mpd"
+},
   {
   "canal": "ESPN AR HD",
   "channel": "espnar",
@@ -120,12 +148,12 @@
     "grupo": "Deportes",
     "tipo": "clearkey",
     "clearkey": {
-      "keyId": "e6eab53cf8ea962b999c59c298596a65",
-      "key": "10c103ae76f99620d66fa75f2c03302a"
+      "keyId": "072a47b89c20350081005d0ee251155e",
+      "key": "d821b4e4a794e59e20ac7af2d6949cba"
     },
     "referer": "https://portal.app.flow.com.ar",
     "origin": "https://portal.app.flow.com.ar",
-    "url": "https://edge-live23-sl.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzk1MzkwMjA4Iiwic2lwIjoiMTk0LjI2LjEzMS4yMSIsInBhdGgiOiIvbGl2ZS9jN2Vkcy9FU1BOM19VeS1QeS9TQV9MaXZlX2Rhc2hfZW5jLyIsInNlc3Npb25fY2RuX2lkIjoiZTMzMGJkMTQ5MmJlZjlhOSIsInNlc3Npb25faWQiOiIxNWY0NDVlNjIwMTcwMjZlYWZiY2U3OTUwZTI4NjhkYy0xNzk1MjE3NDA4LTgxNCIsImNsaWVudF9pZCI6ImZsb3c6NDE5OTA3Ny0tZmxvdzo0MTk5MDc3OlAiLCJkZXZpY2VfaWQiOiIxNWY0NDVlNjIwMTcwMjZlYWZiY2U3OTUwZTI4NjhkYyIsIm1heF9zZXNzaW9ucyI6MCwic2Vzc2lvbl9kdXJhdGlvbiI6MCwidXJsIjoiaHR0cHM6Ly8yMDEuMjM1LjY2LjExNSIsImF1ZCI6IjM1MyIsInNvdXJjZXMiOls4NSwxNDQsMjEwLDg2LDg4XX0=.NEIVKR4S9IgtkdpU-GoJkfM7pLMQgDqqm_bB9MfMuJ-hIlf7eOSU_VYCV_If6ojkdiekBjLLX8adtTdqv0o_aQ==/live/c6eds/ESPN2_Arg/SA_Live_dash_enc/ESPN2_Arg.mpd"
+    "url": "https://880d93e46e2d42dd93f33ac20fe9a646.mediatailor.us-east-1.amazonaws.com/v1/dash/dffceb859a31f14d0ed059ef6b4e2e4d850e60b1/live_1099/1099_ESPN_2_ARGENTINA_DASH/manifest.mpd"
   },
   {
     "canal": "ESPN 3 AR HD",

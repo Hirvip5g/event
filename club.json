@@ -8,7 +8,7 @@
         "aliases": ["slavia praha", "slavia prague", "slavia praga"]
     },
     "Sporting CP": {
-        "search_name": "Sporting Lisbon",
+        "search_name": "Sporting CP",
         "aliases": ["sporting cp", "sporting lisbon", "sporting de lisboa"]
     },
     "Inter": {
@@ -475,20 +475,20 @@
         "search_name": "Al-Nassr",
         "aliases": ["DEMO2"]
     },
-    "DEMO": {
-        "search_name": "DEMO",
+    "UD da Serra": {
+        "search_name": "União da Serra",
         "aliases": ["DEMO2"]
     },
-    "DEMO": {
-        "search_name": "DEMO",
+    "PSV": {
+        "search_name": "PSV Eindhoven",
         "aliases": ["DEMO2"]
     },
-    "DEMO": {
-        "search_name": "DEMO",
+    "NEC": {
+        "search_name": "NEC Nijmegen",
         "aliases": ["DEMO2"]
     },
-    "DEMO": {
-        "search_name": "DEMO",
+    "Sporting Braga": {
+        "search_name": "Braga",
         "aliases": ["DEMO2"]
     },
     "DEMO": {
