@@ -70,20 +70,6 @@
     "url": "https://edge-live23-sl.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzk1MDk0ODgxIiwic2lwIjoiODQuMjMzLjIzNC4xOTUiLCJwYXRoIjoiL2xpdmUvYzZlZHMvTmlja19Kci9TQV9MaXZlX2Rhc2hfZW5jXy8iLCJzZXNzaW9uX2Nkbl9pZCI6IjA5MWE3ZDAxNDA3NTM3M2MiLCJzZXNzaW9uX2lkIjoiIiwiY2xpZW50X2lkIjoiIiwiZGV2aWNlX2lkIjoiIiwibWF4X3Nlc3Npb25zIjowLCJzZXNzaW9uX2R1cmF0aW9uIjowLCJ1cmwiOiJodHRwczovLzIwMS4yMzUuNjYuMTE2IiwiYXVkIjoiMzUzIiwic291cmNlcyI6Wzg1LDE0NCwyMTAsODYsODhdfQ==.oA5G1R7BgRLSEKEB957AwcPz79lrMgxfeiHbyCludFOYHoMbay1cOF83ARKHXVuDOV4kGP71SEtOij71ZYrAvA==/live/c4eds/ESPN2_UY/SA_Live_dash_enc/ESPN2_UY.mpd"
   },
   {
-    "canal": "ESPN 2 FHD",
-    "channel": "espn2",
-    "logo": "https://raw.githubusercontent.com/masterentertainment/listas/refs/heads/main/logos/ESPN2.png",
-    "grupo": "Deportes",
-    "tipo": "clearkey",
-    "clearkey": {
-      "keyId": "a81ee4a694fecd6aa8a682e5024b313c",
-      "key": "6d15568e1dab59e7202ae12e71505185"
-    },
-    "referer": "https://portal.app.flow.com.ar",
-    "origin": "https://portal.app.flow.com.ar",
-    "url": "https://barinaslive1.boldmss.com/ESPN_2/ESPN_2.isml/ESPN_2.mpd?"
-  },
-  {
     "canal": "ESPN 3 FHD",
     "channel": "espn3",
     "logo": "https://i.postimg.cc/0MCLmw7Z/ESPN-3-Argentina.png",
@@ -97,62 +83,6 @@
     "origin": "https://portal.app.flow.com.ar",
     "url": "https://f648185a3ca04006a528cda76d1e64e8.mediatailor.us-east-1.amazonaws.com/v1/dash/dffceb859a31f14d0ed059ef6b4e2e4d850e60b1/live_1102/1102_ESPN_3_ANDINA_DASH/manifest.mpd"
   },
-  {
-    "canal": "ESPN 4 FHD",
-    "channel": "espn4",
-    "logo": "https://foros.forounivers.com/uploads/monthly_2024_02/large.ESPN4.png.eb49e6eecab0c1a9e2c758279e2a6784.png",
-    "grupo": "Deportes",
-    "tipo": "clearkey",
-    "clearkey": {
-      "keyId": "54a2c11085c315ed6ff85c340a86095d",
-      "key": "5f0d10cf4a5c7e22e286b7e8cb4e79f4"
-    },
-    "referer": "https://portal.app.flow.com.ar",
-    "origin": "https://portal.app.flow.com.ar",
-    "url": "https://barinaslive1.boldmss.com/ESPN_4/ESPN_4.isml/ESPN_4.mpd?"
-  },
-  {
-    "canal": "ESPN 5 FHD",
-    "channel": "espn5",
-    "logo": "https://i.imgur.com/eBYBgnn.png",
-    "grupo": "Deportes",
-    "tipo": "clearkey",
-    "clearkey": {
-        "keyId": "4e126297fc7af35c736bdffe98eecaaa",
-        "key": "fdb0091cf67d9c596dbfb07cf6f4c8f5"
-    },
-    "referer": "",
-    "origin": "",
-    "url": "https://barinaslive1.boldmss.com/ESPN_5/ESPN_5.isml/ESPN_5.mpd?"
-},
-{
-    "canal": "ESPN 6 FHD",
-    "channel": "espn6",
-    "logo": "https://i.imgur.com/dk8AYkV.png",
-    "grupo": "Deportes",
-    "tipo": "clearkey",
-    "clearkey": {
-        "keyId": "f5836382452cdca1e1c8bf8b9a713534",
-        "key": "7d261930c3309ed2b06d2abb34a64410"
-    },
-    "referer": "",
-    "origin": "",
-    "url": "https://barinaslive1.boldmss.com/ESPN_6/ESPN_6.isml/ESPN_6.mpd?"
-},
-{
-    "canal": "ESPN 7 FHD",
-    "channel": "espn7",
-    "logo": "https://i.imgur.com/bWrggk0.png",
-    "grupo": "Deportes",
-    "tipo": "clearkey",
-    "clearkey": {
-        "keyId": "98ea1e32227adcd3618baac2bbf36814",
-        "key": "72a03a09d33e412f14a9bfa4ef24b542"
-    },
-    "referer": "",
-    "origin": "",
-    "url": "https://barinaslive1.boldmss.com/ESPN_7/ESPN_7.isml/ESPN_7.mpd?"
-},
   {
     "canal": "ESPN CO HD",
     "channel": "espn",
