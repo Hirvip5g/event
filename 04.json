@@ -14,18 +14,18 @@
     "url": "https://edge-live23-sl.cvattv.com.ar/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzk1MzkwMjA4Iiwic2lwIjoiMTk0LjI2LjEzMS4yMSIsInBhdGgiOiIvbGl2ZS9jN2Vkcy9FU1BOM19VeS1QeS9TQV9MaXZlX2Rhc2hfZW5jLyIsInNlc3Npb25fY2RuX2lkIjoiZTMzMGJkMTQ5MmJlZjlhOSIsInNlc3Npb25faWQiOiIxNWY0NDVlNjIwMTcwMjZlYWZiY2U3OTUwZTI4NjhkYy0xNzk1MjE3NDA4LTgxNCIsImNsaWVudF9pZCI6ImZsb3c6NDE5OTA3Ny0tZmxvdzo0MTk5MDc3OlAiLCJkZXZpY2VfaWQiOiIxNWY0NDVlNjIwMTcwMjZlYWZiY2U3OTUwZTI4NjhkYyIsIm1heF9zZXNzaW9ucyI6MCwic2Vzc2lvbl9kdXJhdGlvbiI6MCwidXJsIjoiaHR0cHM6Ly8yMDEuMjM1LjY2LjExNSIsImF1ZCI6IjM1MyIsInNvdXJjZXMiOls4NSwxNDQsMjEwLDg2LDg4XX0=.NEIVKR4S9IgtkdpU-GoJkfM7pLMQgDqqm_bB9MfMuJ-hIlf7eOSU_VYCV_If6ojkdiekBjLLX8adtTdqv0o_aQ==/live/c3eds/ESPN2HD/SA_Live_dash_enc/ESPN2HD.mpd"
   },
   {
-    "canal": "ESPN FHD",
-    "channel": "espn",
-    "logo": "https://i.postimg.cc/T5YBc3cB/ESPN-1-Argentina.png",
+    "canal": "ESPN MX HD",
+    "channel": "espnmx",
+    "logo": "https://r2.thesportsdb.com/images/media/channel/logo/fysmne1660760631.png",
     "grupo": "Deportes",
     "tipo": "clearkey",
     "clearkey": {
-      "keyId": "b3e4e74ae2080b137e68bbd0ef8a7e05",
-      "key": "cb004fb100bd92f23793562891e3236b"
+      "keyId": "8d1be59dc758ccbab3b567343d5d2915",
+      "key": "4744fd0e2fb5aaae961f468925ac2b73"
     },
     "referer": "https://portal.app.flow.com.ar",
     "origin": "https://portal.app.flow.com.ar",
-    "url": "https://barinaslive1.boldmss.com/ESPN/ESPN.isml/ESPN.mpd?"
+    "url": "https://broad-pond-27fe.kartinadaren.workers.dev/https://dish.akamaized.net/Content/DASH/Live/channel(espn)/variant.mpd"
   },
   {
     "canal": "ESPN PY HD",
